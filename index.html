@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content = "IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">   
+    
+    <link rel="stylesheet" href="styles.css">
+    <title>dandelio</title>
+</head>
+<body>
+    <div class="directory">
+            <img src="daniIcon.png" alt="Dani, or &quot;D&quot;; half of D &amp; Elio." width="110" height="110">
+            <h1 id="header" class="irish-grover-regular">dandelio</h1>
+            <img src="elioIcon.png" alt="Elio; half of D &amp; Elio." width="110" height="110">
+            
+            <!--<button id="mailbox">Mail</button>
+            <button id="gacha">Gacha</button> -->
+        </div>
+    <section class="container">
+        
+        <div id="toolbar" class="sidebar">
+            <!-- <h1>dandelio</h1> -->
+            <label for="stroke">Stroke</label>
+            <input id="stroke" name='stroke' type="color" value="#873512"> <!--Color picker input!-->
+            <label for="lineWidth">Line Width</label>
+            <input id="lineWidth" name='lineWidth' type="number" value="5"> <!--Stroke size input!-->
+            <button id="clear">Clear</button>
+            <div id="dos">
+                <button id="undo">Undo</button>
+                <button id="redo">Redo</button>
+            </div>
+        </div>
+        
+        <div class ="drawing-board">
+            <div id="follower" style="opacity: 0;">
+                <img style="width: 50px;" src="elioIcon.png" alt="Mascot Elio.">
+            </div>
+            <canvas id="drawing-board">
+            </canvas>
+            <div class="card-structure">
+                <div id="stamp" class="card-stamp"></div>
+                <div class="card-linesholder">
+                    <div class="card-lines"></div>
+                    <div class="card-lines"></div>
+                    <div class="card-lines"></div>
+                </div>
+            </div>
+        </div>
+        <div id="scrapbook" class="sidebar">
+            <button id="inventory">Scrapbook</button>
+            <h1 class="irish-grover-regular todo" style="color: lightblue;">WIP!</h1>
+        </div>
+        
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>

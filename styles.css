@@ -1,0 +1,195 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+    color: white;
+    background-color: #0C3D42;
+    
+}
+/* Text Designs */
+h1{
+    background-color: #155555;
+    text-align: center;
+    padding: 10px;
+    color: #ED9955;
+    font-size: 64;
+    /*temp*/
+    border-radius: 30px;
+
+    padding-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 0px;
+
+}
+#header{
+    border-radius: 30px;
+    letter-spacing: 20px;
+
+}
+
+.directory {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-top: 1dvh;
+    
+}
+
+.irish-grover-regular {
+  font-family: "Irish Grover", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.irish-grover-regular.todo {
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        opacity: 0.5;
+        transform: skew(1deg);
+    }
+    to {
+        opacity: 1;
+        transform: skew(-1deg);
+    }
+}
+
+
+.container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+/* Postcard Canvas */
+.drawing-board{    
+    /* display: flex;
+
+    align-items: center;
+    justify-content: center; */
+    height: 70dvh;
+    width: max(400px, 64dvw);
+
+    border-style: dashed;
+    border-width: thick;
+    border-color: #155555;
+    border-radius: 10px;
+    background-color: bisque;
+    margin: 1dvw;
+
+    /* padding: 10px; */
+    box-sizing: border-box;
+    position: relative;
+}
+
+ #follower {
+    z-index: 3;
+    position: fixed; /* or absolute if within a specific container */
+    width: 20px;
+    height: 20px;
+    /* background-color: black; */
+    /* border-radius: 50%;  for a circular follower */
+    pointer-events: none; /* prevents the follower from interfering with other elements */
+    transform: translate(-20%, -20%); /* centers the follower on the cursor */
+    }
+
+.card-structure{
+    display: flex;
+    display: column;
+    width: max(190px, 31dvw);
+    height: 65dvh;
+
+    position: absolute;
+    z-index: 1;
+    top: 2dvh;
+    right: 0;
+
+    /* Divider style */
+    border-style: none none none dashed;
+    border-color: goldenrod;
+    border-width: 5px;
+    pointer-events: none;
+}
+
+.card-stamp {
+    width: 70px;
+    height: 100px;
+    background-color: coral;
+    border-radius: 5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: floralwhite;
+    position: absolute;
+    right: 5dvw;
+    top: 2dvh;
+}
+
+.card-lines {
+    width: 20dvw;
+    height: 10px;
+    background-color: goldenrod;
+    margin: 50px;
+}
+
+.card-linesholder {
+    align-self: flex-end;
+    margin-bottom: 15px;
+}
+
+#drawing-board canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* display: flex; */
+}
+
+.sidebar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+    width: 150px;
+}
+
+@media screen and (max-width: 942px) {
+    .container{
+        flex-direction: column;
+    }
+    /* .card-structure{
+        transform: rotate(90deg);
+    } */
+}
+
+#toolbar * {
+    margin-bottom: 6px;
+}
+
+#toolbar label {
+    font-size: 12px;
+}
+
+#toolbar input{
+    /* width: 60%; */
+    text-align: center;
+}
+
+.sidebar button{
+    background-color: palegoldenrod;
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+#dos{
+    display: flex;
+    flex-direction: row;
+}

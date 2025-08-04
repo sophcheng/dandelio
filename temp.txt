@@ -1,0 +1,75 @@
+const canvas = document.getElementById('drawing-board');
+const toolbar = document.getElementById('toolbar');
+const ctx = canvas.getContext('2d'); //we draw in 2d
+
+const canvasOffsetX = canvas.offsetLeft; 
+const canvasOffsetY = canvas.offsetLeft; 
+
+canvas.width = window.innerWidth - canvasOffsetX;
+canvas.height = window.innerHeight - canvasOffsetY; //this is not the mouse placement issue...look @ startY logic!!
+
+console.log(canvasOffsetY);
+
+//=70px since toolbar
+//distance canvas has from viewport (?); =0 since nothing above canvas
+
+let isPainting = false;
+let lineWidth = 10; //can be changed via input field for lineWidth
+
+//STARTING COORD OF THE USER'S DRAWING/STROKE
+let startX;
+let startY; //let is for changing variables, const is for fixed!
+
+//if toolbar is clicked & the corr id is engaged with in a <param1> manner...
+toolbar.addEventListener('click', e => {
+    if(e.target.id === 'clear'){
+        ctx.clearRect(0,0,canvas.width, canvas.height);
+    }
+});
+
+toolbar.addEventListener('change', e => { //lambda function wowe
+    if(e.target.id === 'stroke'){
+        ctx.strokeStyle = e.target.value;
+    }
+
+    else if(e.target.id === 'lineWidth'){
+        lineWidth = e.target.value;
+    }
+});
+//DRAWING FUNCS
+
+const draw = e => {
+    if(!isPainting){
+        return;
+    }
+    ctx.lineWidth = lineWidth;
+    ctx.lineCap = 'round';
+
+    ctx.lineTo(e.clientX - canvasOffsetX, e.clientY); //starting point w/ toolbar chonk accounted for
+    ctx.stroke(); //so line appears as we draw
+}
+
+canvas.addEventListener('mousedown', (e) => {
+    isPainting = true;
+
+    const rect = canvas.getBoundingClientRect();
+    startX = e.clientX - rect.left;
+    startY = e.clientY - rect.top;
+
+    startX = e.clientX;
+    startY = e.clientY; //holds x,y coord of mouse when event was triggered
+});
+
+canvas.addEventListener('mouseup', e => {
+    isPainting = false;
+    ctx.stroke(); // colors the line drawn
+    ctx.beginPath(); //starts a new path/resets start? for the next stroke : ) otherwise, would be 
+});
+
+canvas.addEventListener('mousemove', draw); 
+
+
+
+
+
+
