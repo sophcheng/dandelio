@@ -11,6 +11,12 @@ A simple drawing/writing site, where you can make and (e)mail "postcards" to you
 
 > (Work in Progress)
 
+TODO:
+- Save feature for designs/progress
+- Implement gacha mechanic for stamp designs (can be saved in scrapbook -- stamps are consumibles)
+- Link to email, so created postcards can be sent
+- Address drawing when resizing (i.e. mobile devices)
+
 ## References
 
 - Drawing Board w/JS Tutorial: [Javascript Academy](https://www.youtube.com/watch?v=mRDo-QXVUv8&ab_channel=JavaScriptAcademy)
