@@ -7,7 +7,7 @@
     <img style="width: 100px;" src="assets/images/elioIcon.png" alt = "Mascot Elio.">
 </div>
 
-A simple drawing/writing site, where you can make and (e)mail "postcards" to your friends. My attempt at bringing back letter writing, down to the (very pixelatedly wobbly) brushstroke!
+A simple drawing/writing site, where you can make and (e)mail "postcards" to friends! My attempt at bringing back letter writing, down to the (very pixelatedly wobbly) brushstroke!
 
 > (Work in Progress)
 
